@@ -1,0 +1,67 @@
+<!DOCTYPE cv [
+  <!ELEMENT cv (informations_personnelles, formation, experiences_professionnelles, competences)>
+  <!ELEMENT informations_personnelles (nom, prenom, adresse, email, telephone)>
+  <!ELEMENT nom (#PCDATA)>
+  <!ELEMENT prenom (#PCDATA)>
+  <!ELEMENT adresse (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT telephone (#PCDATA)>
+  <!ELEMENT formation (diplome, etablissement, annee)>
+  <!ELEMENT diplome (#PCDATA)>
+  <!ELEMENT etablissement (#PCDATA)>
+  <!ELEMENT annee (#PCDATA)>
+  <!ELEMENT experiences_professionnelles (experience*)>
+  <!ELEMENT experience (poste, entreprise, duree, description)>
+  <!ELEMENT poste (#PCDATA)>
+  <!ELEMENT entreprise (#PCDATA)>
+  <!ELEMENT duree (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT competences (langues, competences_techniques)>
+  <!ELEMENT langues (langue*)>
+  <!ELEMENT langue (#PCDATA)>
+  <!ELEMENT competences_techniques (competence*)>
+  <!ELEMENT competence (#PCDATA)>
+]>
+
+<cv>
+  <informations_personnelles>
+    <nom>Nom</nom>
+    <prenom>Prénom</prenom>
+    <adresse>Adresse</adresse>
+    <email>email@example.com</email>
+    <telephone>1234567890</telephone>
+  </informations_personnelles>
+  
+  <formation>
+    <diplome>Master en Informatique</diplome>
+    <etablissement>Université XYZ</etablissement>
+    <annee>2020</annee>
+  </formation>
+  
+  <experiences_professionnelles>
+    <experience>
+      <poste>Ingénieur logiciel</poste>
+      <entreprise>Entreprise A</entreprise>
+      <duree>2 ans</duree>
+      <description>Développement d'applications web et mobiles.</description>
+    </experience>
+    <experience>
+      <poste>Stagiaire développeur</poste>
+      <entreprise>Entreprise B</entreprise>
+      <duree>6 mois</duree>
+      <description>Développement de nouvelles fonctionnalités.</description>
+    </experience>
+  </experiences_professionnelles>
+  
+  <competences>
+    <langues>
+      <langue>Français</langue>
+      <langue>Anglais</langue>
+    </langues>
+    <competences_techniques>
+      <competence>Java</competence>
+      <competence>HTML/CSS</competence>
+      <competence>JavaScript</competence>
+    </competences_techniques>
+  </competences>
+</cv>

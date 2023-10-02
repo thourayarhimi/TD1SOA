@@ -1,0 +1,49 @@
+<!DOCTYPE cdtheque [
+  <!ELEMENT cdtheque (cd*)>
+  <!ATTLIST cdtheque data CDATA #REQUIRED>
+  <!ATTLIST cdtheque auteur CDATA #REQUIRED>
+  <!ELEMENT cd (titre, artiste, style?)>
+  <!ELEMENT titre (#PCDATA)>
+  <!ELEMENT style (#PCDATA)>
+  <!ELEMENT artiste (#PCDATA)>
+]>
+
+<cdtheque data="MaCDtheque" auteur="Moi">
+  <cd>
+    <titre>Album 1</titre>
+    <artiste>Artiste 1</artiste>
+    <style>Pop</style>
+  </cd>
+  <cd>
+    <titre>Album 2</titre>
+    <artiste>Artiste 2</artiste>
+  </cd>
+</cdtheque>
+
+#########cdtheque.dtd########
+
+<!ELEMENT cdtheque (cd*)>
+<!ATTLIST cdtheque data CDATA #REQUIRED>
+<!ATTLIST cdtheque auteur CDATA #REQUIRED>
+<!ELEMENT cd (titre, artiste, style?)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT style (#PCDATA)>
+<!ELEMENT artiste (#PCDATA)>
+
+##############Fichier XML avec référence à la DTD externe###############
+
+<!DOCTYPE cdtheque SYSTEM "cdtheque.dtd">
+
+<cdtheque data="MaCDtheque" auteur="Moi">
+  <cd>
+    <titre>Album 1</titre>
+    <artiste>Artiste 1</artiste>
+    <style>Pop</style>
+  </cd>
+  <cd>
+    <titre>Album 2</titre>
+    <artiste>Artiste 2</artiste>
+  </cd>
+</cdtheque>
+
+
